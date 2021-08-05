@@ -30,4 +30,8 @@ public class AdrenalineEnchantment extends Enchantment {
         user.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 20, 0));
         super.onUserDamaged(user, attacker, level);
     }
+    @Override
+    public boolean canAccept(Enchantment other) {
+        return !(other instanceof LightweightEnchantment);
+    }
 }

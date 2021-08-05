@@ -23,6 +23,7 @@
     ]
   },
   "mixins": [
+    "chocolate.mixins.json"
   ],
 
   "depends": {

@@ -31,3 +31,7 @@ bin/
 # Fabric
 
 run/
+
+# Textures / GIMP
+txcf/
+*.xcf

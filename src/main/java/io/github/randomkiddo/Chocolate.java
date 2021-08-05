@@ -7,30 +7,25 @@
 
 package io.github.randomkiddo;
 
-import io.github.randomkiddo.enchants.AdrenalineEnchantment;
-import io.github.randomkiddo.enchants.LightweightEnchantment;
-import io.github.randomkiddo.enchants.WinceEnchantment;
+import io.github.randomkiddo.armor.SlimeBootsRegistry;
+import io.github.randomkiddo.blocks.BlockRegistry;
+import io.github.randomkiddo.enchants.*;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class Chocolate implements ModInitializer {
+	public static final ItemGroup CHOCOLATE_GROUP = FabricItemGroupBuilder.create(
+			new Identifier("chocolate", "chocolate_group"))
+			.icon(() -> new ItemStack(Items.LEATHER_BOOTS))
+			.build();
 	@Override
 	public void onInitialize() {
-		Registry.register(
-				Registry.ENCHANTMENT,
-				new Identifier("chocolate", "adrenaline"),
-				new AdrenalineEnchantment()
-		);
-		Registry.register(
-				Registry.ENCHANTMENT,
-				new Identifier("chocolate", "lightweight"),
-				new LightweightEnchantment()
-		);
-		Registry.register(
-				Registry.ENCHANTMENT,
-				new Identifier("chocolate", "wince"),
-				new WinceEnchantment()
-		);
+		EnchantmentRegistry.register();
+		SlimeBootsRegistry.register();
+		BlockRegistry.register();
 	}
 }

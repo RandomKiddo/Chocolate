@@ -28,4 +28,8 @@ public class LightweightEnchantment extends Enchantment {
         user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20 * 2 * level, 0));
         super.onUserDamaged(user, attacker, level);
     }
+    @Override
+    public boolean canAccept(Enchantment other) {
+        return !(other instanceof AdrenalineEnchantment);
+    }
 }
