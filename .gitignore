@@ -35,3 +35,6 @@ run/
 # Textures / GIMP
 txcf/
 *.xcf
+
+# Badges / ImgShields
+*.svg
