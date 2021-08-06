@@ -7,13 +7,13 @@
   ],
   "key": {
     "G": {
-      "tag": "mineable/pickaxe/granite"
+      "item": "minecraft:granite"
     },
     "D": {
-      "tag": "mineable/pickaxe/diorite"
+      "item": "minecraft:diorite"
     },
     "W": {
-      "tag": "minecraft:white_dye"
+      "item": "minecraft:white_dye"
     }
   },
   "result": {
